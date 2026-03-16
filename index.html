@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Vaddi | Infrastructure Analyst</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
+}
+header{
+background:#020617;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+}
+header h1{
+color:#38bdf8;
+}
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:15px;
+}
+nav a:hover{
+color:#38bdf8;
+}
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+.hero h2{
+font-size:40px;
+margin-bottom:10px;
+}
+.hero span{
+color:#38bdf8;
+}
+.hero button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+background:#38bdf8;
+color:black;
+font-weight:bold;
+cursor:pointer;
+border-radius:5px;
+}
+section{
+padding:70px 10%;
+}
+.section-title{
+font-size:30px;
+margin-bottom:30px;
+color:#38bdf8;
+}
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+.skill-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.project-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+.project-card:hover{
+transform:translateY(-5px);
+}
+.contact input, .contact textarea{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border:none;
+border-radius:5px;
+}
+.contact button{
+padding:10px 20px;
+background:#38bdf8;
+border:none;
+font-weight:bold;
+cursor:pointer;
+}
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:40px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Sai Vaddi</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+<section class="hero">
+<h2>Hello, I'm <span>Sai</span></h2>
+<p>Infrastructure Analyst with 5 years experience managing enterprise IT systems.</p>
+<button onclick="scrollToSection()">View My Work</button>
+</section>
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<p>
+I am an Infrastructure Analyst with 5 years of experience supporting enterprise IT environments.
+My expertise includes Windows Server administration, Active Directory management, infrastructure monitoring,
+virtualization, and troubleshooting critical IT systems.
+</p>
+</section>
+<section id="skills">
+<h2 class="section-title">Skills</h2>
+<div class="skills">
+<div class="skill-card">
+<h3>Windows Server</h3>
+<p>Administration, maintenance and troubleshooting.</p>
+</div>
+<div class="skill-card">
+<h3>Active Directory</h3>
+<p>User management, group policies, security policies.</p>
+</div>
+<div class="skill-card">
+<h3>Cloud</h3>
+<p>Azure fundamentals and infrastructure support.</p>
+</div>
+<div class="skill-card">
+<h3>Networking</h3>
+<p>DNS, DHCP, VPN, firewall troubleshooting.</p>
+</div>
+<div class="skill-card">
+<h3>Virtualization</h3>
+<p>VMware / Hyper-V infrastructure management.</p>
+</div>
+<div class="skill-card">
+<h3>Automation</h3>
+<p>PowerShell scripting and automation.</p>
+</div>
+</div>
+</section>
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+<div class="projects">
+<div class="project-card">
+<h3>Active Directory Migration</h3>
+<p>Migrated enterprise users and group policies to new domain infrastructure.</p>
+</div>
+<div class="project-card">
+<h3>Server Deployment</h3>
+<p>Configured Windows servers with DNS, DHCP and security policies.</p>
+</div>
+<div class="project-card">
+<h3>Infrastructure Monitoring</h3>
+<p>Implemented monitoring tools to improve uptime and incident response.</p>
+</div>
+</div>
+</section>
+<section id="contact">
+<h2 class="section-title">Contact</h2>
+<div class="contact">
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Message"></textarea>
+<button onclick="sendMessage()">Send Message</button>
+</div>
+</section>
+<footer>
+<p>© 2026 Sai Vaddi | Infrastructure Analyst</p>
+</footer>
+<script>
+function scrollToSection(){
+document.querySelector("#projects").scrollIntoView({
+behavior:"smooth"
+});
+}
+function sendMessage(){
+alert("Message sent! (Demo only)");
+}
+</script>
+</body>
+</html>
