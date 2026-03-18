@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sai Vaddi | Infrastructure Analyst</title>
+
 <style>
 *{
  margin:0;
@@ -18,6 +19,7 @@ body{
  overflow-x:hidden;
  position:relative;
 }
+
 /* Interactive background */
 .background-shapes {
  position:fixed;
@@ -41,6 +43,8 @@ body{
  50% {transform:translateY(-100vh) translateX(50vw);}
  100% {transform:translateY(-200vh) translateX(0);}
 }
+
+/* HEADER */
 header{
  background:#020617;
  padding:20px 10%;
@@ -54,6 +58,7 @@ header{
 header h1{
  color:#38bdf8;
 }
+
 nav a{
  color:white;
  text-decoration:none;
@@ -63,6 +68,8 @@ nav a{
 nav a:hover{
  color:#38bdf8;
 }
+
+/* HERO */
 .hero{
  height:80vh;
  display:flex;
@@ -89,6 +96,8 @@ nav a:hover{
  cursor:pointer;
  border-radius:5px;
 }
+
+/* SECTIONS */
 section{
  padding:70px 10%;
 }
@@ -97,6 +106,8 @@ section{
  margin-bottom:30px;
  color:#38bdf8;
 }
+
+/* SKILLS */
 .skills{
  display:grid;
  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -107,6 +118,8 @@ section{
  padding:20px;
  border-radius:10px;
 }
+
+/* PROJECTS */
 .projects{
  display:grid;
  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -121,6 +134,8 @@ section{
 .project-card:hover{
  transform:translateY(-5px);
 }
+
+/* CONTACT */
 .contact input, .contact textarea{
  width:100%;
  padding:10px;
@@ -135,6 +150,27 @@ section{
  font-weight:bold;
  cursor:pointer;
 }
+
+/* RESUME BUTTON */
+.resume-btn {
+ display: inline-block;
+ padding: 14px 30px;
+ background: #38bdf8;
+ color: #0f172a;
+ font-weight: bold;
+ border-radius: 8px;
+ text-decoration: none;
+ font-size: 18px;
+ transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+ background: #0ea5e9;
+ color: white;
+ transform: translateY(-3px);
+}
+
+/* FOOTER */
 footer{
  text-align:center;
  padding:20px;
@@ -143,7 +179,9 @@ footer{
 }
 </style>
 </head>
+
 <body>
+
 <!-- Interactive background shapes -->
 <div class="background-shapes">
 <div class="shape" style="left:10%; width:25px; height:25px;"></div>
@@ -152,72 +190,60 @@ footer{
 <div class="shape" style="left:70%; width:30px; height:30px; animation-duration:20s;"></div>
 <div class="shape" style="left:85%; width:25px; height:25px; animation-duration:16s;"></div>
 </div>
+
 <header>
 <h1>Sai Vaddi</h1>
 <nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+#aboutAbout</a>
+#skillsSkills</a>
+#projectsProjects</a>
+#resumeRésumé</a>
+#contactContact</a>
 </nav>
 </header>
+
 <section class="hero">
 <h2>Hello, I'm <span>Sai</span></h2>
 <p>Infrastructure Analyst with 5 years experience managing enterprise IT systems.</p>
 <button onclick="scrollToSection()">View My Work</button>
 </section>
+
 <section id="about">
 <h2 class="section-title">About Me</h2>
 <p>
-I am an Infrastructure Analyst with 5 years of experience supporting enterprise IT environments.  
-My expertise includes Windows Server administration, Active Directory management, infrastructure monitoring,  
-network troubleshooting, cloud support, and automation using PowerShell. I have successfully managed multiple enterprise projects, including server deployments, migrations, and IT process optimizations.  
-I enjoy streamlining infrastructure processes, improving system reliability, and providing efficient solutions to complex IT challenges.  
-I am constantly learning new technologies to stay ahead in the rapidly evolving IT landscape and am passionate about implementing secure and scalable IT solutions for organizations.
+I am an Infrastructure Analyst with 5 years of experience supporting enterprise IT environments.
+My expertise includes Windows Server, Active Directory, Azure support, infrastructure monitoring,
+PowerShell automation, and enterprise-level troubleshooting.
+I am passionate about modern workplace technologies and delivering secure, scalable IT solutions.
 </p>
 </section>
+
 <section id="skills">
 <h2 class="section-title">Skills</h2>
 <div class="skills">
-<div class="skill-card">
-<h3>Windows Server</h3>
-<p>Administration, maintenance and troubleshooting.</p>
-</div>
-<div class="skill-card">
-<h3>Active Directory</h3>
-<p>User management, group policies, security policies.</p>
-</div>
-<div class="skill-card">
-<h3>Cloud</h3>
-<p>Azure fundamentals and infrastructure support.</p>
-</div>
-<div class="skill-card">
-<h3>Networking</h3>
-<p>DNS, DHCP, VPN, firewall troubleshooting.</p>
-</div>
-<div class="skill-card">
-<h3>Automation</h3>
-<p>PowerShell scripting and automation.</p>
-</div>
+<div class="skill-card"><h3>Windows Server</h3><p>Administration & troubleshooting</p></div>
+<div class="skill-card"><h3>Active Directory</h3><p>User & policy management</p></div>
+<div class="skill-card"><h3>Cloud</h3><p>Azure infrastructure & identity</p></div>
+<div class="skill-card"><h3>Networking</h3><p>DNS, DHCP, VPN, Firewall</p></div>
+<div class="skill-card"><h3>Automation</h3><p>PowerShell scripting</p></div>
 </div>
 </section>
+
 <section id="projects">
 <h2 class="section-title">Projects</h2>
 <div class="projects">
-<div class="project-card">
-<h3>Active Directory Migration</h3>
-<p>Migrated enterprise users and group policies to new domain infrastructure.</p>
-</div>
-<div class="project-card">
-<h3>Server Deployment</h3>
-<p>Configured Windows servers with DNS, DHCP and security policies.</p>
-</div>
-<div class="project-card">
-<h3>Infrastructure Monitoring</h3>
-<p>Implemented monitoring tools to improve uptime and incident response.</p>
-</div>
+<div class="project-card"><h3>Active Directory Migration</h3><p>Migrated enterprise users and GPOs.</p></div>
+<div class="project-card"><h3>Server Deployment</h3><p>Configured Windows servers with secure policies.</p></div>
+<div class="project-card"><h3>Infrastructure Monitoring</h3><p>Implemented monitoring for uptime improvement.</p></div>
 </div>
 </section>
+
+<!-- RÉSUMÉ SECTION -->
+<section id="resume">
+<h2 class="section-title">Résumé</h2>
+resume.pdf⬇ Download My Résumé (PDF)</a>
+</section>
+
 <section id="contact">
 <h2 class="section-title">Contact</h2>
 <div class="contact">
@@ -227,18 +253,19 @@ I am constantly learning new technologies to stay ahead in the rapidly evolving 
 <button onclick="sendMessage()">Send Message</button>
 </div>
 </section>
+
 <footer>
 <p>© 2026 Sai Vaddi | Infrastructure Analyst</p>
 </footer>
+
 <script>
 function scrollToSection(){
- document.querySelector("#projects").scrollIntoView({
-   behavior:"smooth"
- });
+ document.querySelector("#projects").scrollIntoView({behavior:"smooth"});
 }
 function sendMessage(){
  alert("Message sent! (Demo only)");
 }
 </script>
+
 </body>
 </html>
