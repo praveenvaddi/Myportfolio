@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sai Vaddi | Infrastructure Analyst</title>
-
 <style>
 *{
  margin:0;
@@ -13,259 +12,272 @@
  font-family:Arial, Helvetica, sans-serif;
 }
 body{
- background:#0f172a;
+ background:#020617;
  color:white;
- line-height:1.6;
  overflow-x:hidden;
- position:relative;
 }
-
-/* Interactive background */
-.background-shapes {
+/* SMOOTH FLOATING BACKGROUND */
+.bg{
  position:fixed;
- top:0;
- left:0;
  width:100%;
  height:100%;
- pointer-events:none;
  z-index:-1;
 }
-.shape {
+.circle{
  position:absolute;
- width:30px;
- height:30px;
- background:rgba(56,189,248,0.3);
  border-radius:50%;
- animation: float 15s linear infinite;
+ background:rgba(56,189,248,0.15);
+ animation:float 20s linear infinite;
 }
-@keyframes float {
- 0% {transform:translateY(0) translateX(0);}
- 50% {transform:translateY(-100vh) translateX(50vw);}
- 100% {transform:translateY(-200vh) translateX(0);}
+@keyframes float{
+ from{transform:translateY(100vh);}
+ to{transform:translateY(-120vh);}
 }
-
-/* HEADER */
+/* NAVBAR */
 header{
- background:#020617;
+ backdrop-filter: blur(12px);
+ background:rgba(2,6,23,0.8);
  padding:20px 10%;
  display:flex;
  justify-content:space-between;
  align-items:center;
  position:sticky;
  top:0;
- z-index:10;
+ border-bottom:1px solid rgba(56,189,248,0.2);
 }
 header h1{
  color:#38bdf8;
 }
-
 nav a{
  color:white;
  text-decoration:none;
- margin-left:20px;
- font-size:15px;
+ margin-left:25px;
+ transition:0.3s;
 }
 nav a:hover{
  color:#38bdf8;
 }
-
 /* HERO */
 .hero{
- height:80vh;
+ height:90vh;
  display:flex;
  flex-direction:column;
  justify-content:center;
  align-items:center;
  text-align:center;
- padding:20px;
 }
 .hero h2{
- font-size:40px;
- margin-bottom:10px;
+ font-size:42px;
 }
 .hero span{
  color:#38bdf8;
 }
-.hero button{
- margin-top:20px;
- padding:12px 25px;
+.typing{
+ color:#38bdf8;
+}
+.hero p{
+ max-width:700px;
+ margin-top:15px;
+ color:#cbd5f5;
+}
+/* BUTTONS */
+.btn-group{
+ margin-top:25px;
+}
+.btn{
+ padding:12px 20px;
+ margin:5px;
+ border-radius:6px;
  border:none;
+ cursor:pointer;
+ font-weight:bold;
+ transition:0.3s;
+}
+.primary{
  background:#38bdf8;
  color:black;
- font-weight:bold;
- cursor:pointer;
- border-radius:5px;
 }
-
+.secondary{
+ border:1px solid #38bdf8;
+ background:transparent;
+ color:#38bdf8;
+}
+.btn:hover{
+ transform:scale(1.05);
+ box-shadow:0 0 12px #38bdf8;
+}
 /* SECTIONS */
 section{
- padding:70px 10%;
+ padding:80px 10%;
 }
 .section-title{
- font-size:30px;
+ font-size:32px;
  margin-bottom:30px;
  color:#38bdf8;
 }
-
-/* SKILLS */
-.skills{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
- gap:20px;
-}
-.skill-card{
- background:#1e293b;
- padding:20px;
- border-radius:10px;
-}
-
-/* PROJECTS */
-.projects{
+/* CARDS */
+.skills, .projects{
  display:grid;
  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
- gap:20px;
+ gap:25px;
 }
-.project-card{
- background:#1e293b;
- padding:20px;
- border-radius:10px;
+.skill-card, .project-card{
+ background:#0f172a;
+ padding:25px;
+ border-radius:12px;
+ border:1px solid rgba(56,189,248,0.1);
  transition:0.3s;
 }
-.project-card:hover{
+.skill-card:hover, .project-card:hover{
  transform:translateY(-5px);
+ box-shadow:0 0 15px rgba(56,189,248,0.3);
 }
-
 /* CONTACT */
-.contact input, .contact textarea{
- width:100%;
- padding:10px;
+.contact p{
  margin-bottom:10px;
- border:none;
- border-radius:5px;
 }
-.contact button{
- padding:10px 20px;
- background:#38bdf8;
- border:none;
- font-weight:bold;
- cursor:pointer;
-}
-
-/* RESUME BUTTON */
-.resume-btn {
- display: inline-block;
- padding: 14px 30px;
- background: #38bdf8;
- color: #0f172a;
- font-weight: bold;
- border-radius: 8px;
- text-decoration: none;
- font-size: 18px;
- transition: 0.3s ease;
-}
-
-.resume-btn:hover {
- background: #0ea5e9;
- color: white;
- transform: translateY(-3px);
-}
-
 /* FOOTER */
 footer{
  text-align:center;
- padding:20px;
+ padding:25px;
  background:#020617;
- margin-top:40px;
 }
+/* FLOAT ELEMENTS */
+.circle:nth-child(1){left:10%; width:30px; height:30px;}
+.circle:nth-child(2){left:30%; width:40px; height:40px;}
+.circle:nth-child(3){left:50%; width:20px; height:20px;}
+.circle:nth-child(4){left:70%; width:35px; height:35px;}
+.circle:nth-child(5){left:85%; width:25px; height:25px;}
 </style>
 </head>
-
 <body>
-
-<!-- Interactive background shapes -->
-<div class="background-shapes">
-<div class="shape" style="left:10%; width:25px; height:25px;"></div>
-<div class="shape" style="left:25%; width:35px; height:35px; animation-duration:18s;"></div>
-<div class="shape" style="left:50%; width:20px; height:20px; animation-duration:12s;"></div>
-<div class="shape" style="left:70%; width:30px; height:30px; animation-duration:20s;"></div>
-<div class="shape" style="left:85%; width:25px; height:25px; animation-duration:16s;"></div>
+<!-- CLEAN BACKGROUND -->
+<div class="bg">
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
 </div>
-
 <header>
 <h1>Sai Vaddi</h1>
 <nav>
-#aboutAbout</a>
-#skillsSkills</a>
-#projectsProjects</a>
-#resumeRésumé</a>
-#contactContact</a>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
+<a href="#contact">Contact</a>
 </nav>
 </header>
-
 <section class="hero">
-<h2>Hello, I'm <span>Sai</span></h2>
-<p>Infrastructure Analyst with 5 years experience managing enterprise IT systems.</p>
-<button onclick="scrollToSection()">View My Work</button>
+<h2>Hello, I'm <span>Sai Vaddi</span></h2>
+<h3>I am a <span class="typing"></span></h3>
+<p>
+Infrastructure Analyst with over 5 years of experience in enterprise IT environments,
+specializing in Azure, Active Directory, Intune, and SCCM. Focused on delivering secure,
+scalable solutions and resolving complex infrastructure challenges efficiently.
+</p>
+<div class="btn-group">
+<button class="btn primary" onclick="scrollToSection()">View Projects</button>
+<a href="Sai_Vaddi_CV.pdf" download>
+<button class="btn secondary">Download CV</button>
+</a>
+<a href="https://www.linkedin.com/in/sai-vaddi" target="_blank">
+</div>
 </section>
-
 <section id="about">
 <h2 class="section-title">About Me</h2>
 <p>
-I am an Infrastructure Analyst with 5 years of experience supporting enterprise IT environments.
-My expertise includes Windows Server, Active Directory, Azure support, infrastructure monitoring,
-PowerShell automation, and enterprise-level troubleshooting.
-I am passionate about modern workplace technologies and delivering secure, scalable IT solutions.
+I am a dedicated Infrastructure Analyst with strong hands-on experience supporting enterprise IT environments across both cloud and on-premise systems.
+My expertise includes Azure, Active Directory, endpoint management, and automation using PowerShell.
+I have successfully delivered deployments, improved system performance, and ensured security compliance while resolving complex technical issues efficiently.
 </p>
 </section>
-
+<section id="experience">
+<h2 class="section-title">Experience</h2>
+<div class="projects">
+<div class="project-card">
+<h3>Infrastructure Analyst – Mott MacDonald</h3>
+<p>Managing Intune, SCCM, VPN, Defender and enterprise infrastructure.</p>
+</div>
+<div class="project-card">
+<h3>IT Analyst – Wolseley</h3>
+<p>Azure VMs, Office 365, system monitoring and support.</p>
+</div>
+<div class="project-card">
+<h3>Application Support Engineer – RBSS</h3>
+<p>Terraform automation, VM management and network troubleshooting.</p>
+</div>
+</div>
+</section>
 <section id="skills">
 <h2 class="section-title">Skills</h2>
 <div class="skills">
-<div class="skill-card"><h3>Windows Server</h3><p>Administration & troubleshooting</p></div>
-<div class="skill-card"><h3>Active Directory</h3><p>User & policy management</p></div>
-<div class="skill-card"><h3>Cloud</h3><p>Azure infrastructure & identity</p></div>
-<div class="skill-card"><h3>Networking</h3><p>DNS, DHCP, VPN, Firewall</p></div>
-<div class="skill-card"><h3>Automation</h3><p>PowerShell scripting</p></div>
+<div class="skill-card">Windows & Servers</div>
+<div class="skill-card">Azure & Cloud</div>
+<div class="skill-card">Active Directory</div>
+<div class="skill-card">Intune & SCCM</div>
+<div class="skill-card">Networking</div>
+<div class="skill-card">PowerShell</div>
+<div class="skill-card">Security</div>
+<div class="skill-card">Terraform & Docker</div>
 </div>
 </section>
-
 <section id="projects">
 <h2 class="section-title">Projects</h2>
 <div class="projects">
-<div class="project-card"><h3>Active Directory Migration</h3><p>Migrated enterprise users and GPOs.</p></div>
-<div class="project-card"><h3>Server Deployment</h3><p>Configured Windows servers with secure policies.</p></div>
-<div class="project-card"><h3>Infrastructure Monitoring</h3><p>Implemented monitoring for uptime improvement.</p></div>
+<div class="project-card">
+<h3>Autopilot Laptop Builds</h3>
+<p>Automated device provisioning using Windows Autopilot to streamline onboarding.</p>
+</div>
+<div class="project-card">
+<h3>7-Day PC Recovery Program</h3>
+<p>Designed structured recovery workflow to rebuild and secure systems.</p>
+</div>
+<div class="project-card">
+<h3>Infrastructure Monitoring & Maintenance</h3>
+<p>Implemented monitoring solutions ensuring uptime and proactive issue resolution.</p>
+</div>
 </div>
 </section>
-
-<!-- RÉSUMÉ SECTION -->
-<section id="resume">
-<h2 class="section-title">Résumé</h2>
-resume.pdf⬇ Download My Résumé (PDF)</a>
+<section id="certifications">
+<h2 class="section-title">Certifications</h2>
+<div class="skills">
+<div class="skill-card">AZ-900 (Azure Fundamentals)</div>
+<div class="skill-card">AZ-104 (Azure Administrator)</div>
+<div class="skill-card">MS-900 (Microsoft 365 Fundamentals)</div>
+<div class="skill-card">ITIL V4</div>
+</div>
 </section>
-
 <section id="contact">
 <h2 class="section-title">Contact</h2>
 <div class="contact">
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="5" placeholder="Message"></textarea>
-<button onclick="sendMessage()">Send Message</button>
+<p><strong>Mobile:</strong> 07587710664</p>
+<p><strong>Email:</strong> Praveenvadhi@gmail.com</p>
 </div>
 </section>
-
 <footer>
-<p>© 2026 Sai Vaddi | Infrastructure Analyst</p>
+<p>© 2026 Sai Vaddi</p>
 </footer>
-
 <script>
+const roles=["Infrastructure Analyst","Azure Specialist","Cloud Engineer"];
+let i=0,j=0,isDeleting=false;
+function type(){
+ let text=roles[i];
+ document.querySelector(".typing").textContent=text.substring(0,j);
+ if(!isDeleting && j<text.length) j++;
+ else if(isDeleting && j>0) j--;
+ else{
+   isDeleting=!isDeleting;
+   if(!isDeleting) i=(i+1)%roles.length;
+ }
+ setTimeout(type,isDeleting?50:100);
+}
+type();
 function scrollToSection(){
  document.querySelector("#projects").scrollIntoView({behavior:"smooth"});
 }
-function sendMessage(){
- alert("Message sent! (Demo only)");
-}
 </script>
-
 </body>
 </html>
